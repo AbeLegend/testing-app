@@ -1,0 +1,82 @@
+<div class="container">
+  <button type="button" (click)="goBack()" class="button">Back</button>
+  <h2>Customer List</h2>
+  <div *ngIf="customers.length === 0" class="no-data">No customers found.</div>
+  <input
+    *ngIf="customers.length >= 1"
+    type="text"
+    placeholder="Search"
+    [(ngModel)]="searchTerm"
+    (keyup)="onSearchChange()"
+    class="search-input"
+  />
+  <table *ngIf="customers.length > 0">
+    <thead>
+      <tr>
+        <th>Salesman ID</th>
+        <th>Customer Name</th>
+        <th>Pic</th>
+        <th>City</th>
+        <th>Remark</th>
+        <th>NPWP</th>
+        <th>Price Category</th>
+        <th>Address</th>
+        <th>Address2</th>
+        <th>Contact No</th>
+        <th>Region</th>
+        <th>Province</th>
+        <th>Kuota</th>
+        <th>Preferred Expedition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of pagedCustomers">
+        <td>{{ customer.salesmanId }}</td>
+        <td>{{ customer.customerName }}</td>
+        <td>{{ customer.pic }}</td>
+        <td>{{ customer.city }}</td>
+        <td>{{ customer.remark }}</td>
+        <td>{{ customer.npwp }}</td>
+        <td>{{ customer.customerPriceCategory }}</td>
+        <td>{{ customer.address }}</td>
+        <td>{{ customer.address2 }}</td>
+        <td>{{ customer.contactNo }}</td>
+        <td>{{ customer.region }}</td>
+        <td>{{ customer.province }}</td>
+        <td>{{ customer.kuota }}</td>
+        <td>{{ customer.preferredExpedition }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination Controls -->
+  <div class="pagination-controls" *ngIf="customers.length >= 1">
+    <button
+      (click)="onPageChange(1)"
+      [disabled]="currentPage === 1"
+      class="first"
+    >
+      First
+    </button>
+    <button
+      (click)="onPageChange(currentPage - 1)"
+      [disabled]="currentPage === 1"
+      class="previous"
+    >
+      Previous
+    </button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button
+      (click)="onPageChange(currentPage + 1)"
+      [disabled]="currentPage === totalPages"
+    >
+      Next
+    </button>
+    <button
+      (click)="onPageChange(totalPages)"
+      [disabled]="currentPage === totalPages"
+    >
+      Last
+    </button>
+  </div>
+</div>

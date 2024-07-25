@@ -1,0 +1,47 @@
+.print-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.header {
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.queue-info {
+  margin: 20px 0;
+}
+
+.queue-info p {
+  margin: 5px 0;
+}
+
+.queue-info h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.barcode img {
+  margin: 10px 0;
+}
+
+.footer {
+  border-top: 1px solid #000;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 12px;
+}

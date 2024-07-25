@@ -1,0 +1,94 @@
+.container {
+  /* width: 95%; */
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+}
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  font-size: 18px;
+  display: block;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0px 10px;
+}
+
+.pagination-controls button {
+  background-color: #126dce;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.pagination-controls button:disabled {
+  background-color: gray;
+  color: black;
+  border: none;
+  border-radius: 5%;
+  font-size: 18px;
+  cursor: default;
+  padding: 5px 10px;
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+}
+.pagination-controls button:disabled:hover {
+  background-color: gray;
+}

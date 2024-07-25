@@ -1,0 +1,22 @@
+<div *ngIf="customer" class="print-container">
+  <div class="header">
+    <h1>ALMEGATEX</h1>
+  </div>
+  <div class="queue-info">
+    <p>Nomor Antrian anda:</p>
+    <h1>{{ queueNumber }}</h1>
+    <p>Mohon Menunggu</p>
+    <div class="barcode">
+      <img
+        [src]="
+          'https://api.qrserver.com/v1/create-qr-code/?data=' + customer._id
+        "
+      />
+    </div>
+    <p>{{ customer.updatedAt | date : "dd/MM/yyyy, HH:mm:ss" }}</p>
+  </div>
+  <div class="footer">
+    <p>Budayakan antri untuk kenyamanan bersama</p>
+    <p>Terima kasih atas kunjungan anda</p>
+  </div>
+</div>

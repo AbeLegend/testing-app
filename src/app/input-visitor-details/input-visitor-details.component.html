@@ -1,0 +1,282 @@
+<div class="container">
+  <button type="button" (click)="goBack()">Back</button>
+  <h2>Customer Biodata</h2>
+  <form [formGroup]="customerForm" (ngSubmit)="addCustomer()">
+    <div class="form-group">
+      <label for="salesman-id">Salesman ID</label>
+      <select
+        id="salesman-id"
+        formControlName="salesmanId"
+        class="form-control"
+      >
+        <option value="" disabled selected>Select Salesman ID</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <div
+        *ngIf="
+          customerForm.controls['salesmanId'].touched &&
+          customerForm.controls['salesmanId'].invalid
+        "
+        class="error"
+      >
+        Salesman ID is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="customer-name">Customer Name</label>
+      <input
+        placeholder="Budi"
+        required
+        type="text"
+        id="customer-name"
+        formControlName="customerName"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['customerName'].touched &&
+          customerForm.controls['customerName'].invalid
+        "
+        class="error"
+      >
+        Customer Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="pic">Pic</label>
+      <input
+        placeholder="Joni"
+        required
+        type="text"
+        id="pic"
+        formControlName="pic"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['pic'].touched &&
+          customerForm.controls['pic'].invalid
+        "
+        class="error"
+      >
+        Pic is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input
+        placeholder="Jakarta"
+        required
+        type="text"
+        id="city"
+        formControlName="city"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['city'].touched &&
+          customerForm.controls['city'].invalid
+        "
+        class="error"
+      >
+        City is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="remark">Remark</label>
+      <input
+        placeholder="Customer VIP"
+        required
+        type="text"
+        id="remark"
+        formControlName="remark"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['remark'].touched &&
+          customerForm.controls['remark'].invalid
+        "
+        class="error"
+      >
+        Remark is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="npwp">NPWP</label>
+      <input
+        placeholder="1234567890"
+        required
+        type="text"
+        id="npwp"
+        formControlName="npwp"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['npwp'].touched &&
+          customerForm.controls['npwp'].invalid
+        "
+        class="error"
+      >
+        NPWP is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="customer-price-category">Customer Price Category</label>
+      <input
+        placeholder="Gold"
+        required
+        type="text"
+        id="customer-price-category"
+        formControlName="customerPriceCategory"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['customerPriceCategory'].touched &&
+          customerForm.controls['customerPriceCategory'].invalid
+        "
+        class="error"
+      >
+        Customer Price Category is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input
+        placeholder="Jl. Sudirman No. 1"
+        required
+        type="text"
+        id="address"
+        formControlName="address"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['address'].touched &&
+          customerForm.controls['address'].invalid
+        "
+        class="error"
+      >
+        Address is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address2">Address Ke 2</label>
+      <input
+        placeholder="Jl. Kebon Jeruk No. 5"
+        type="text"
+        id="address2"
+        formControlName="address2"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="contact-no">Contact No</label>
+      <input
+        placeholder="08123456789"
+        required
+        type="text"
+        id="contact-no"
+        formControlName="contactNo"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['contactNo'].touched &&
+          customerForm.controls['contactNo'].invalid
+        "
+        class="error"
+      >
+        Contact No is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="region">Region</label>
+      <input
+        placeholder="Jawa barat"
+        required
+        type="text"
+        id="region"
+        formControlName="region"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['region'].touched &&
+          customerForm.controls['region'].invalid
+        "
+        class="error"
+      >
+        Region is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="province">Province</label>
+      <input
+        placeholder="DKI Jakarta"
+        required
+        type="text"
+        id="province"
+        formControlName="province"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['province'].touched &&
+          customerForm.controls['province'].invalid
+        "
+        class="error"
+      >
+        Province is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="kuota">Kuota</label>
+      <input
+        placeholder="100"
+        required
+        type="number"
+        id="kuota"
+        formControlName="kuota"
+        class="form-control"
+        value="0"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['kuota'].touched &&
+          customerForm.controls['kuota'].invalid
+        "
+        class="error"
+      >
+        Kuota is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="preferred-expedition">Preferred Expedition</label>
+      <input
+        placeholder="JNE"
+        required
+        type="text"
+        id="preferred-expedition"
+        formControlName="preferredExpedition"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          customerForm.controls['preferredExpedition'].touched &&
+          customerForm.controls['preferredExpedition'].invalid
+        "
+        class="error"
+      >
+        Preferred Expedition is required.
+      </div>
+    </div>
+    <div class="button-container">
+      <button type="submit">Add Customer</button>
+    </div>
+  </form>
+</div>
